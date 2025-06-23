@@ -5,8 +5,7 @@ html {
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  /* Adicionando um fundo suave para o z-index fazer sentido */
-  background-color: #fdefee; 
+  background-color: #fdefee;
 }
 
 .song {
@@ -23,7 +22,7 @@ body {
   width: 100vw;
 }
 
-.container > div {
+.container>div {
   left: 0;
   position: absolute;
   right: 0;
@@ -90,11 +89,12 @@ body {
   font-size: 4rem;
 }
 
-.idea-5 span, .idea-6 span {
+.idea-5 span,
+.idea-6 span {
   display: inline-block;
 }
 
-.idea-6 span{
+.idea-6 span {
   font-size: 15rem;
 }
 
@@ -147,7 +147,7 @@ body {
   margin: 0;
   text-transform: none;
   color: #c9184a;
-  text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .wish h5 {
@@ -166,71 +166,153 @@ body {
   z-index: 3;
 }
 
-/* --- ANIMAÇÃO DOS CORAÇÕES --- */
-/* Esta é a sua versão original, que funciona, com UMA correção */
-
 .eight .heart {
   position: absolute;
   font-size: 2rem;
-  animation: float 15s linear infinite; /* A animação é linear e infinita */
-  opacity: 0; /* Começa invisível, a animação controla a aparição */
-  
-  /* ====================================================================== */
-  /* CORREÇÃO FINAL: z-index: 0 para aparecer na frente do fundo da página */
-  /* ====================================================================== */
+  animation: float 15s linear infinite;
+  opacity: 0;
   z-index: 0;
 }
 
-/* Delays para os corações começarem em tempos diferentes */
-.eight .heart:nth-child(1) { left: 10%; animation-delay: 0s; }
-.eight .heart:nth-child(2) { left: 20%; animation-delay: 2s; font-size: 2.5rem; }
-.eight .heart:nth-child(3) { left: 35%; animation-delay: 5s; }
-.eight .heart:nth-child(4) { left: 50%; animation-delay: 1s; font-size: 1.8rem; }
-.eight .heart:nth-child(5) { left: 65%; animation-delay: 3s; }
-.eight .heart:nth-child(6) { left: 80%; animation-delay: 6s; font-size: 2.2rem; }
-.eight .heart:nth-child(7) { left: 90%; animation-delay: 4s; }
-.eight .heart:nth-child(8) { left: 55%; animation-delay: 7s; font-size: 1.5rem; }
+.eight .heart:nth-child(1) {
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.eight .heart:nth-child(2) {
+  left: 20%;
+  animation-delay: 2s;
+  font-size: 2.5rem;
+}
+
+.eight .heart:nth-child(3) {
+  left: 35%;
+  animation-delay: 5s;
+}
+
+.eight .heart:nth-child(4) {
+  left: 50%;
+  animation-delay: 1s;
+  font-size: 1.8rem;
+}
+
+.eight .heart:nth-child(5) {
+  left: 65%;
+  animation-delay: 3s;
+}
+
+.eight .heart:nth-child(6) {
+  left: 80%;
+  animation-delay: 6s;
+  font-size: 2.2rem;
+}
+
+.eight .heart:nth-child(7) {
+  left: 90%;
+  animation-delay: 4s;
+}
+
+.eight .heart:nth-child(8) {
+  left: 55%;
+  animation-delay: 7s;
+  font-size: 1.5rem;
+}
 
 @keyframes float {
   0% {
     transform: translateY(100vh);
     opacity: 1;
   }
+
   100% {
     transform: translateY(-10vh);
     opacity: 0;
   }
 }
 
-/* --- Media Queries --- */
-@media screen and (max-width: 500px) {
-  .container {
-    width: 90%;
+/* ====================================================================== */
+/* --- DESIGN RESPONSIVO PARA CELULARES E TABLETS --- */
+/* ====================================================================== */
+
+/* Qualquer tela com 768px de largura ou menos aplicará estes estilos. */
+@media screen and (max-width: 768px) {
+
+  /* --- AJUSTANDO FONTES GRANDES --- */
+
+  .one {
+    font-size: 10vw;
+    /* Usa a largura da tela para definir o tamanho */
   }
-  .four .text-box {
-    width: 90%;
+
+  .three {
+    font-size: 8vw;
   }
-  .text-box .fake-btn {
-    bottom: -38px;
-    right: 5px;
+
+  .five p {
+    font-size: 1.8rem;
+    /* Reduz o tamanho das frases de "ideia" */
   }
-  .idea-5 span {
-    display: block;
+
+  .five .idea-5 {
+    font-size: 3rem;
   }
+
   .idea-6 span {
     font-size: 10rem;
+    /* Diminui o "DEMAIS" */
   }
+
+  .wish-hbd {
+    font-size: 12vw;
+    /* Título principal também se ajusta à tela */
+  }
+
+  .wish h5 {
+    font-size: 1.2rem;
+  }
+
+  .nine p {
+    font-size: 1.2rem;
+  }
+
+  /* --- AJUSTANDO TAMANHOS DE ELEMENTOS --- */
+
+  .four .text-box {
+    width: 90%;
+    /* A caixa de texto agora ocupa 90% da tela, não 600px fixos */
+  }
+
+  .six img {
+    height: 250px;
+    /* Diminui o tamanho da foto */
+  }
+
+  .six .hat {
+    width: 70px;
+    /* Ajusta o chapéu para a foto menor */
+    left: calc(50% - 35px);
+    /* Centraliza o chapéu na foto */
+    top: -20%;
+  }
+
+}
+
+/* Media query específica para celulares bem pequenos */
+@media screen and (max-width: 480px) {
+  .idea-6 span {
+    font-size: 8rem;
+  }
+
+  .wish-hbd {
+    font-size: 15vw;
+  }
+
+  .six img {
+    height: 200px;
+  }
+
   .six .hat {
     width: 50px;
-  }
-  .wish-hbd {
-    font-size: 3em;
-  }
-  .wish h5 {
-    font-size: 1.4rem;
-  }
-  .nine p {
-    font-size: 1.5rem;
-    font-weight: lighter;
+    left: calc(50% - 25px);
   }
 }
