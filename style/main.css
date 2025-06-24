@@ -107,7 +107,7 @@ body {
 
 .six img {
   display: inline-block;
-  height: 350px;
+  height: 450px;
   max-width: 100%;
 }
 
@@ -274,7 +274,7 @@ body {
   }
 
   .six img {
-    height: 250px;
+    height: 300px;
   }
 
   .six .hat {
@@ -295,7 +295,7 @@ body {
   }
 
   .six img {
-    height: 200px;
+    height: 300px;
   }
 
   .six .hat {
