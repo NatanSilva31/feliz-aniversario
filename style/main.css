@@ -94,8 +94,9 @@ body {
   display: inline-block;
 }
 
+/* --- TAMANHO DO "DEMAIS" CORRIGIDO --- */
 .idea-6 span {
-  font-size: 15rem;
+  font-size: 9rem; /* Valor base reduzido para melhor controle */
 }
 
 .six {
@@ -231,17 +232,13 @@ body {
 }
 
 /* ====================================================================== */
-/* --- DESIGN RESPONSIVO PARA CELULARES E TABLETS --- */
+/* --- DESIGN RESPONSIVO PARA CELULARES E TABLETS (CORRIGIDO) --- */
 /* ====================================================================== */
 
-/* Qualquer tela com 768px de largura ou menos aplicará estes estilos. */
 @media screen and (max-width: 768px) {
-
-  /* --- AJUSTANDO FONTES GRANDES --- */
 
   .one {
     font-size: 10vw;
-    /* Usa a largura da tela para definir o tamanho */
   }
 
   .three {
@@ -250,7 +247,6 @@ body {
 
   .five p {
     font-size: 1.8rem;
-    /* Reduz o tamanho das frases de "ideia" */
   }
 
   .five .idea-5 {
@@ -258,13 +254,11 @@ body {
   }
 
   .idea-6 span {
-    font-size: 10rem;
-    /* Diminui o "DEMAIS" */
+    font-size: 13vw; /* Letras se ajustam à tela */
   }
 
   .wish-hbd {
     font-size: 12vw;
-    /* Título principal também se ajusta à tela */
   }
 
   .wish h5 {
@@ -275,32 +269,25 @@ body {
     font-size: 1.2rem;
   }
 
-  /* --- AJUSTANDO TAMANHOS DE ELEMENTOS --- */
-
   .four .text-box {
     width: 90%;
-    /* A caixa de texto agora ocupa 90% da tela, não 600px fixos */
   }
 
   .six img {
     height: 250px;
-    /* Diminui o tamanho da foto */
   }
 
   .six .hat {
     width: 70px;
-    /* Ajusta o chapéu para a foto menor */
     left: calc(50% - 35px);
-    /* Centraliza o chapéu na foto */
     top: -20%;
   }
 
 }
 
-/* Media query específica para celulares bem pequenos */
 @media screen and (max-width: 480px) {
   .idea-6 span {
-    font-size: 8rem;
+    font-size: 15vw;
   }
 
   .wish-hbd {
@@ -316,3 +303,4 @@ body {
     left: calc(50% - 25px);
   }
 }
+/* A CHAVE "}" EXTRA QUE CAUSAVA O ERRO FOI REMOVIDA DAQUI */
